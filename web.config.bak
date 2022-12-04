@@ -1,0 +1,18 @@
+<configuration>  
+  <system.webServer>
+    <handlers>
+        <add name="FirstFlask Handler"
+            path="*"
+            verb="*"
+            modules="FastCgiModule"
+            scriptProcessor="D:\Data Drive\Ryerson\Python\BMI_Fresh\venv\Scripts\python.exe|D:\Data Drive\Ryerson\Python\BMI_Fresh\venv\lib\site-packages\wfastcgi.py"
+            resourceType="Unspecified"
+            requireAccess="Script" />
+    </handlers>
+  </system.webServer>
+  <appSettings>
+    <add key="WSGI_HANDLER" value="flaskapp.app" /> <!-- {name_of_file}.{name_of_flask_app}-->
+    <add key="PYTHONPATH" value="D:\Data Drive\Ryerson\Python\BMI_Fresh" />
+	<add key="WSGI_LOG" value="D:\Data Drive\Ryerson\Python\BMI_Fresh\app.log" />
+  </appSettings>
+</configuration> 
